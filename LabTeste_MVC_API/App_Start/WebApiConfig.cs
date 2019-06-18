@@ -13,7 +13,7 @@ namespace LabTeste_MVC_API
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
